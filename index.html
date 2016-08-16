@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Nimeyoo</title>
+	<meta charset="utf-8">
+	
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src = "js/jquery-2.2.4.js"></script>
+	<script type="text/javascript" src = "js/bootstrap.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+	<script type="text/javascript" src = "js/script.js"></script> 
+	
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top navbar-upper">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-upper" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="assets/logo.png"></a>
+			</div>
+			<div id="navbar-upper" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+				
+				<ul class="nav navbar-nav navbar-right" style = "">
+					<li><a href="#" class = "border">Sign In</a></li>
+					<li><a href="#" class = "border">Sign Up</a></li>
+					<li><a href="#">Help</a></li>
+					<li>
+						<form class="navbar-form" role="search">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Q & A" name="q">
+								<div class="input-group-btn">
+									<button class="btn btn-default search-btn" type="submit">
+										<i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</div>
+							</form>
+						</li>
+					</ul>
+
+					<div class="col-sm-3 pull-right">
+
+					</div>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<nav class="navbar navbar-default navbar-lower">
+			<div class="container">
+
+				<div id="navbar-lower" class="" aria-expanded="false" style="height: 1px;">
+
+					<ul class="nav navbar-nav">
+						<li><a href="#">Questions</a></li>
+						<li><a href="#">Tags</a></li>
+						<li><a href="#">Users</a></li>
+						<li><a href="#">Ask</a></li>
+						<li><a href="#">Dashboard</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<div class = "blue-banner">
+
+			<div class="container">
+				<div class = "title">Welcome to openstack</div>
+				<div class="row content">
+
+					<div class="col-xs-3 banner-partition border">
+						<img src="assets/add_tags.svg">
+						<p class = "caption">
+							ask questions and get answers
+						</p>
+					</div>
+					<div class="col-xs-3 banner-partition border">
+						<img src="assets/add_tags.svg">
+						<p class = "caption">
+							add tags to easily find answers
+						</p>
+					</div>
+					<div class="col-xs-3 banner-partition border">
+						<img src="assets/score_high.svg">
+						<p class = "caption">
+							score high when people vote
+						</p>
+					</div>
+					<div class="col-xs-3 banner-partition">
+						<div class="sub-title ">
+							sign up to get started
+						</div>
+						<span class = "text-caps ">
+							sign up helps you to:
+						</span>
+						<br>
+						<span class = "description ">
+							description text comes up
+						</span>
+						<br>
+						<button type="button" class = "btn signup-btn" id = "signup-btn">sign up</button>
+					</div>
+				</div>
+				<div class = "show-it">
+					<button type="button" class = "btn signup-btn" id = "signup-btn">sign up</button>
+				</div>
+				<div class = "arrow"> <a href="#" id = "shrink-banner"><span class="glyphicon glyphicon-menu-down"></span> </a> </div>
+
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-9">
+					<h3>recent questions</h3>
+
+					<nav class="navbar navbar-default sub-menu">
+						<ul class="nav navbar-nav" style="margin-bottom:-2px;">
+							<li><a href="#">Recent</a></li>
+							<li><a href="#">Hot!</a></li>
+							<li><a href="#">Votes</a></li>
+							<li><a href="#">Responses</a></li>
+							<li><a href="#">Views</a></li>
+						</ul>
+					</nav>
+
+					<div class = "post">
+						<div class="post-title">
+							[openstack-dev][neutron] Syncing neutron DB and OVN DB 
+						</div>
+						<div class = "details">
+							asked 16 minutes ago in <span class = "orange"> openstack-dev </span> by <span class="orange"> gal.sagie_at_gmail.c </span> (4,320 points)
+						</div>
+						<div class = "tags">
+							<ul>
+								<li>nuova</li>
+								<li>neutron</li>
+								<li>devstack</li>
+								<li>migration</li>
+							</ul>
+						</div>
+						<div class = "votes">
+							<div class = "vote border">
+								<img src = "assets/upvote.svg"> 
+								<span class = "vote-count up">72</span>
+							</div >
+							<div class = "vote border">
+								<img src = "assets/downvote.svg"> 
+								<span class = "vote-count down">0</span>
+							</div>
+							<div class = "stats border">
+								<p>Responses -
+									<span class = "count">20</span>
+								</p>
+							</div>
+							<div class = "stats">
+								<p>Views -
+									<span class = "count">24</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "post">
+						<div class="post-title">
+							[openstack-dev][neutron] Syncing neutron DB and OVN DB 
+						</div>
+						<div class = "details">
+							asked 16 minutes ago in <span class = "orange"> openstack-dev </span> by <span class="orange"> gal.sagie_at_gmail.c </span> (4,320 points)
+						</div>
+						<div class = "tags">
+							<ul>
+								<li>nuova</li>
+								<li>neutron</li>
+								<li>devstack</li>
+								<li>migration</li>
+							</ul>
+						</div>
+						<div class = "votes">
+							<div class = "vote border">
+								<img src = "assets/upvote.svg"> 
+								<span class = "vote-count up">72</span>
+							</div >
+							<div class = "vote border">
+								<img src = "assets/downvote.svg"> 
+								<span class = "vote-count down">0</span>
+							</div>
+							<div class = "stats border">
+								<p>Responses -
+									<span class = "count">20</span>
+								</p>
+							</div>
+							<div class = "stats">
+								<p>Views -
+									<span class = "count">24</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "post">
+						<div class="post-title">
+							[openstack-dev][neutron] Syncing neutron DB and OVN DB 
+						</div>
+						<div class = "details">
+							asked 16 minutes ago in <span class = "orange"> openstack-dev </span> by <span class="orange"> gal.sagie_at_gmail.c </span> (4,320 points)
+						</div>
+						<div class = "tags">
+							<ul>
+								<li>nuova</li>
+								<li>neutron</li>
+								<li>devstack</li>
+								<li>migration</li>
+							</ul>
+						</div>
+						<div class = "votes">
+							<div class = "vote border">
+								<img src = "assets/upvote.svg"> 
+								<span class = "vote-count up">72</span>
+							</div >
+							<div class = "vote border">
+								<img src = "assets/downvote.svg"> 
+								<span class = "vote-count down">0</span>
+							</div>
+							<div class = "stats border">
+								<p>Responses -
+									<span class = "count">20</span>
+								</p>
+							</div>
+							<div class = "stats">
+								<p>Views -
+									<span class = "count">24</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class = "post">
+						<div class="post-title">
+							[openstack-dev][neutron] Syncing neutron DB and OVN DB 
+						</div>
+						<div class = "details">
+							asked 16 minutes ago in <span class = "orange"> openstack-dev </span> by <span class="orange"> gal.sagie_at_gmail.c </span> (4,320 points)
+						</div>
+						<div class = "tags">
+							<ul>
+								<li>nuova</li>
+								<li>neutron</li>
+								<li>devstack</li>
+								<li>migration</li>
+							</ul>
+						</div>
+						<div class = "votes">
+							<div class = "vote border">
+								<img src = "assets/upvote.svg"> 
+								<span class = "vote-count up">72</span>
+							</div >
+							<div class = "vote border">
+								<img src = "assets/downvote.svg"> 
+								<span class = "vote-count down">0</span>
+							</div>
+							<div class = "stats border">
+								<p>Responses -
+									<span class = "count">20</span>
+								</p>
+							</div>
+							<div class = "stats">
+								<p>Views -
+									<span class = "count">24</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="col-xs-3 side-bar">
+					<div class="heading">all activity count</div>
+					<div class="content">
+						<ul class = "activity-list">
+							<li class = "border">
+								<span class = "count">20,840</span>
+								<span class = "text">Questions</span>
+							</li>
+							<li class = "border">
+								<span class = "count">64,840</span> 
+								<span class = "text">responses</span>
+							</li>
+							<li class = "border">
+								<span class = "count">26</span> 
+								<span class = "text">comments</span>
+								</li>
+							<li>
+								<span class = "count">4,049</span> 
+								<span class = "text">users</span>
+							</li>
+						</ul>
+					</div>
+					<div class="heading">filter by category</div>
+					<div class="content">
+						<ul class = "category-list">
+							<li> 
+								<input id="option1" type="checkbox">
+								<label for="option1"><span><span></span></span>all categories </label>
+							</li>
+							<li> 
+								<input id="option2" type="checkbox">
+								<label for="option2"><span><span></span></span>category 01  </label>
+							</li>
+							<li> 
+								<input id="option3" type="checkbox">
+								<label for="option3"><span><span></span></span>category 02 </label>
+							</li>
+						</ul>
+						<a href="#" class = "category-link">View All categories</a>
+						<form class="category-form" role="search">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Categories" name="q">
+								<div class="input-group-btn">
+									<button class="btn btn-default search-btn" type="submit">
+										<i class="glyphicon glyphicon-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="heading">popular tags</div>
+					<div class="content">
+						<ul class = "tag-list">
+							<li><a href = "#" class = "active"> tag name  01 </a></li>
+							<li><a href = "#"> lorem      </a></li>
+							<li><a href = "#"> ipsum      </a></li>
+							<li><a href = "#"> dolor set amet  </a></li>
+							<li><a href = "#"> tag name 1 </a></li>
+							<li><a href = "#" class = "active"> lorem      </a></li>
+							<li><a href = "#"> ipsum      </a></li>
+							<li><a href = "#"> amet       </a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<span class="pull-left">feedback | contact us</span>
+				<span class="pull-right">Copyright @ 2016 nimeyo all rights reserved</span>
+			</div>
+		</footer>
+
+	</body>
+	</html>
