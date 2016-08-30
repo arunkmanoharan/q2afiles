@@ -188,17 +188,23 @@ class qa_html_theme extends qa_html_theme_base
 		$this->body_header();
 		$this->body_submenu();
 		
-		/* Additions
-			1. Added if condtion for the page. 
-			2. Created variable $path to know the page.
-		*/
-		
-		$path = $_SERVER['REQUEST_URI'];		
-		if(basename($path) != 'index.php?qa=ask'){
+	/*added for different blue banner in different page*/	
+		if ($this->template=='questions'){
 			$this->body_banner();
 		}
-		
-		
+
+		if ($this->template=='ask'){
+			$this->body_banner_ask();
+		}
+
+		if ($this->template=='tags'){
+			$this->body_banner_tags();
+		}
+
+		if ($this->template=='users'){
+			$this->body_banner_users();
+		}		 
+  	/*end of banner*/
 		$this->body_content();
 		$this->body_footer();
 		$this->body_hidden();
@@ -325,6 +331,39 @@ class qa_html_theme extends qa_html_theme_base
 			</div>
 		</div>');
 	}
+
+	/*banner for ask page*/
+	public function body_banner_ask() {
+		$this->output('<div class = "blue-header">
+		ask a question
+	</div>');
+	}
+
+	/*banner for tags page*/
+	public function body_banner_tags() {
+		$this->output('<div class = "blue-header tags-page hidden-xs">
+				<div class="icon col-xs-3">
+					<img src="'.$this->rooturl.'images/add_tags.svg">
+				</div>
+				<div class = "text col-xs-8">
+					<h3>add tags to easily find answers</h3>
+					<div class="desc">
+						Description text comes here: How to add tags, how tags help, number of tags that can be added etc.
+					</div>
+				</div>
+				<div class = "arrow col-xs-1">
+					<a href="#" ><span class="glyphicon glyphicon-menu-down"></span> </a>
+				</div>
+			</div>');
+	}
+
+	/*banner for users page*/
+	public function body_banner_users() {
+		$this->output('<div class = "blue-header">
+		users
+	</div>');
+	}
+	
 	
 	public function body_content()
 	{
