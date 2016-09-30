@@ -1,0 +1,53 @@
+$userid = $q_item['raw']['userid'];
+
+$result = qa_db_read_all_assoc(
+qa_db_query_sub(
+	'SELECT badge_slug as slug, object_id AS oid FROM ^userbadges WHERE user_id=#',
+	$userid
+)
+);
+
+$fields = array();
+
+if(count($result) > 0) {
+
+	$this->output('<ul class="icons-right">');		
+
+	// count badges
+	$bin = qa_get_badge_list();
+
+	$badges = array();
+
+	foreach($result as $info) {
+		$slug = $info['slug'];
+		$type = $bin[$slug]['type'];
+		if(isset($badges[$type][$slug])) $badges[$type][$slug]['count']++;
+		else $badges[$type][$slug]['count'] = 1;
+		if($info['oid']) $badges[$type][$slug]['oid'][] = $info['oid'];
+	}
+
+	foreach($badges as $type => $badge) {
+		
+		$typea = qa_get_badge_type($type);
+		$typed = $typea['name'];
+		$cnt_badge = count($badge);
+		switch($typed) {
+			case 'Gold':
+				$this->output('<li class="icon"><img src="'.$this->rooturl.'images/gold.svg"></li>
+								<li class="text">'.$cnt_badge.'</li>');
+				break;
+			
+			case 'Silver':
+				$this->output('<li class="icon"><img src="'.$this->rooturl.'images/silver.svg"></li>
+								<li class="text">'.$cnt_badge.'</li>');
+				break;
+			
+			case 'Bronze':
+				$this->output('<li class="icon"><img src="'.$this->rooturl.'images/bronze.svg"></li>
+								<li class="text">'.$cnt_badge.'</li>');
+				break;
+		}
+	}
+$this->output('</ul>');
+}
+			}
