@@ -54,15 +54,15 @@
  *  ========================
  */
 
-	define('QPOD_USERNAME', getenv('bitnami'));
-	define('QPOD_PASSWORD', getenv('qpod_vmw'));
+	define('QPOD_USERNAME', 'bitnami');
+	define('QPOD_PASSWORD', 'qpod_vmw');
 
-	define('QPOD_SOLR_COLLECTION', getenv('qpod'));
-	define('QPOD_SOLR_PORT', getenv('8983'));
-	define('QPOD_SOLR_BASE', getenv('http://52.70.238.225:8983/solr/qpod/'));
+	define('QPOD_SOLR_COLLECTION', 'qpod');
+	define('QPOD_SOLR_PORT', '8983');
+	define('QPOD_SOLR_BASE','http://127.0.0.1:8983/solr/qpod/');
 
-	define('QPOD_LOG_DIR', getenv('/app/qpod/'));
-	define('QPOD_SCRIPT_DIR', getenv('QPOD_SCRIPT_DIR'));
+	define('QPOD_LOG_DIR', '/app/qpod/');
+	define('QPOD_SCRIPT_DIR', 'QPOD_SCRIPT_DIR');
 
 /*
 	Ultra-concise installation instructions:
